@@ -1,0 +1,31 @@
+@use "../../styles.modules.scss" as *;
+.walletBtn {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-flex;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  justify-content: space-between;
+  position: relative;
+
+  &:hover {
+    .connected-info {
+      display: block;
+    }
+  }
+}
+
+.connected-info {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0.5em;
+  background-color: $darkTurquoise;
+  border-radius: 10px;
+}

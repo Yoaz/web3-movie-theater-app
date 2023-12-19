@@ -1,0 +1,94 @@
+// Home.scss
+@use "../../styles.modules.scss" as *;
+
+.schedules-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+
+  .schedule-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .date-title {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    .scroll-container {
+      overflow-x: auto;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .movies-container {
+      display: flex;
+      gap: 20px;
+
+      .movie-card {
+        flex: 1;
+        width: 300px;
+        text-align: center;
+        overflow-y: scroll;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: $white;
+          color: $dark;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .movie-details {
+          margin-top: 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// Loading spinner animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  border: 12px solid rgba(0, 0, 0, 0.1);
+  border-top: 12px solid $white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  margin: 50vh auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .schedule-row {
+    .movies-container {
+      flex-direction: column;
+      align-items: center;
+
+      .movie-card {
+        width: 100%;
+      }
+    }
+  }
+}

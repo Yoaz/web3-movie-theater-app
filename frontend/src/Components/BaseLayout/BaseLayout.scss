@@ -1,0 +1,11 @@
+@use "../../styles.modules.scss" as *;
+
+.BaseLayout {
+  margin: 2% 3%;
+  color: $white;
+  transition: all 400ms;
+
+  @media screen and (max-width: 640px) {
+    margin: 2% 1%;
+  }
+}

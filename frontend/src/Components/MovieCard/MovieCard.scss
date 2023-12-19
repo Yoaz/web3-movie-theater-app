@@ -1,0 +1,57 @@
+@use "../../styles.modules.scss" as *;
+
+// Movie.scss
+.movie-card {
+  border: 2px solid $dark;
+  border-radius: 5%;
+  padding: 40px;
+  margin: 20px;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+
+  .movie-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .movie-title {
+      font-size: 2em;
+      margin: auto;
+      font-weight: bold;
+    }
+
+    .movie-date {
+      color: #555;
+      margin: 0;
+    }
+  }
+
+  .movie-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .movie-duration {
+    font-size: 1em;
+    color: $lightDark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+// Loading spinner animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,46 @@
+@use "../../styles.modules.scss" as *;
+
+// Movie.scss
+.movie-container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-controls {
+  margin-bottom: 20px;
+
+  button {
+    font-size: 1.2em;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  div {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  label {
+    margin-right: 5px;
+  }
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  border: 2px solid #ccc;
+  padding: 40px;
+  margin: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

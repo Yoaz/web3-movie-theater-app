@@ -1,0 +1,47 @@
+// Seats.scss
+@use "../../styles.modules.scss" as *;
+
+.seats-container {
+  display: grid;
+  grid-template-columns: repeat(10, 45px);
+  gap: 10px;
+  margin: 20px auto;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(5, 30px);
+  }
+}
+
+.seat {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  cursor: pointer;
+  border: 1px solid $lightDark;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &.available {
+    background-color: $white;
+    color: $dark;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $darkTurquoise;
+      color: $white;
+    }
+  }
+
+  &.reserved {
+    background-color: $darkTurquoise;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    height: 30px;
+  }
+}

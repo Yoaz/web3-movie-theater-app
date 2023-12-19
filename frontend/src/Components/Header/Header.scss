@@ -1,0 +1,42 @@
+@use "../../styles.modules.scss" as *;
+
+.Header {
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 4%;
+  & ul {
+    & li {
+      display: inline;
+      padding: 1em;
+      transition: $transition;
+
+      &:hover {
+        transform: translateY(-3px);
+        transition: $transition;
+      }
+    }
+  }
+
+  & h1 {
+    @media screen and (max-width: 640px) {
+      padding-right: 0.25rem;
+    }
+
+    display: inline;
+    font-size: xx-large;
+    padding-right: 8rem;
+    font-weight: bold;
+  }
+}
+
+nav {
+  transition: $transition;
+}
+
+.active {
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+}
